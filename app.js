@@ -7,7 +7,7 @@ const PORT = 5000 || process.env.PORT;
 
 app.use(express.static('public'));
 
-// Templating ENgine
+// Templating Engine
 app.use(expressLayout);
 app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
