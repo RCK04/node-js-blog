@@ -1,7 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const Post = require('../models/Post');
 
-// Routes
+/*
+ * GET /
+ * HOME
+ */
+
 router.get('', (req, res) => {
     const locals = {
         title: "NodeJs Blog",
@@ -10,6 +15,22 @@ router.get('', (req, res) => {
 
     res.render('index', { locals });
 });
+
+
+function insertPostData(){
+    Post.insertMany([
+        {
+            title: "Building a Blog",
+            body: "This is the body text"
+        },
+    ])
+}
+insertPostData();
+
+
+
+
+
 
 router.get('/about', (req, res) => {
     res.render('about');
