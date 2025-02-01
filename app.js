@@ -6,7 +6,6 @@ const connectDB = require('./server/config/db');
 const app = express();
 const PORT = 5000 || process.env.PORT;
 
-// Connect to DB
 connectDB();
 
 app.use(express.urlencoded({ extended: true }));
