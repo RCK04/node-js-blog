@@ -62,7 +62,7 @@ img {
     height: auto;
 }
 
-/* Layout */
+/* Layout page */
 .container{
     max-width: 982px;
     margin: 0 auto;
@@ -94,6 +94,7 @@ img {
     ;
 }
 
+/* Media querie */
 @media only screen and (min-width: 768px){
     .header{
         grid-template-columns: auto 1fr auto;
